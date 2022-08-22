@@ -1,38 +1,312 @@
-.App {
-  text-align: center;
+body {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.hero {
+    width: 100%;
+    min-height: 700px;
+    background-image: url("https://kolizey.lviv.ua/wp-content/uploads/2020/07/BUTL3393-1024x683-1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 990;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 700px;
+    background: rgba(0, 0, 0, .3);
+    z-index: 995;
 }
 
-.App-link {
-  color: #61dafb;
+
+.hero__content {
+    color: #fff;
+    position: relative;
+    z-index: 999;
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.content__title {
+    max-width: 600px;
+    width: 100%;
+    font-weight: bold;
+    color: #fff;
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.content__subtitle {
+    color: rgb(194, 190, 190);
+    margin-bottom: 40px;
+}
+
+.content__btn button {
+    padding: 10px 15px;
+    font-size: 20px;
+    color: #fff;
+    background: #d54928;
+    border: 0;
+    transition: all .3s ease;
+    margin-bottom: 40px;
+}
+
+.content__btn button:hover {
+    transform: scale(1.2);
+}
+
+.content__btn_title {
+    font-size: 24px;
+}
+
+.advantages {
+    padding: 50px 0;
+}
+
+.advantages__title {
+    font-size: 34px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.advantages__subtitle {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.advantages__blocks {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+
+.blocks__block:first-child {
+    margin-left: 0;
+}
+
+.blocks__block {
+    margin-left: 130px;
+    text-align: center;
+    max-width: 360px;
+    width: 100%;
+}
+
+.block__title {
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.advantages__btn {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.about__us {
+    width: 100%;
+    padding: 45px 0;
+    background: #000;
+    min-height: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about__us_body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about__image img {
+    max-width: 1024px;
+    width: 100%;
+}
+
+.about__title {
+    color: #fff;
+    max-width: 540px;
+    width: 100%;
+    margin-right: 50px;
+}
+
+.about__title h3 {
+    font-size: 36px;
+}
+
+.about__title p {
+    font-size: 18px;
+}
+
+.sports__ways {
+    width: 100%;
+    padding: 40px 0;
+}
+
+.ways__title {
+    font-size: 24px;
+    max-width: 340px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+.ways__main {
+    display: flex;
+    justify-content: center;
+}
+
+.way:first-child {
+    margin-left: 0;
+}
+
+.way {
+    margin-left: 130px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.way__title {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+
+.training {
+    width: 100%;
+    min-height: 500px;
+    background: url("https://kolizey.lviv.ua/wp-content/uploads/2020/07/BUTM3430-scaled-1.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.training__title {
+    font-size: 64px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+}
+
+.price {
+    width: 100%;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.table {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.price table {
+    max-width: 790px;
+    width: 100%;
+}
+
+.price__cost {
+    text-align: center;
+}
+
+.price table thead th {
+    background-color: #d54928;
+    padding: 20px;
+}
+
+.price table tbody tr td {
+    padding: 20px;
+}
+
+
+.price table tbody tr:nth-child(odd) td {
+    background: rgba(213, 73, 40, .09);
+}
+
+caption {
+    padding: 20px 0;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.training__now {
+    width: 100%;
+    min-height: 500px;
+    background: url("https://kolizey.lviv.ua/wp-content/uploads/2020/07/BUTL3306-1024x683-1.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.training__now_title {
+    font-size: 64px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+}
+
+footer{
+    padding: 30px 0;
+}
+
+.footer__body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__work ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.footer__work ul li {
+    margin-top: 20px;
+    list-style-type: none;
+}
+
+.footer__phone{
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.footer__phone a {
+    text-decoration: none;
+    color: #000;
 }
